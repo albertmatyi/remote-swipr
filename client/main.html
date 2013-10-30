@@ -4,29 +4,25 @@
 
 <body>
 	<div class="container">
+		<div id="slidepane">
+			<h1>Swipe left &amp; right</h1>
+		</div>
 		<div class="hero-unit">
 			<h1>Hello world!</h1>
 			<h2>I am a</h2>
 			<p> 
 				<button class="btn btn-primary btn-large" id="start-tablet">Tablet</button>
-				<button class="btn btn-danger btn-large" id="start-screen">Screen</button>
-				<button class="btn btn-danger btn-large" id="reset">Reset</button>
+				<button class="btn btn-success btn-large" id="start-screen">Screen</button>
 			</p>
 		</div>
-			{{>eventMessages}}
+			{{> imageSlider}}
 	</div>
 </body>
 
-<template name="eventMessages">
-	<div class="row">
-		{{>eventMessage}}
+<template name="imageSlider">
+	<div id="imagesSlider" style="display: none;">
+		{{#each images}}
+			<img src="{{path}}" alt="{{path}}" data-slidr="{{path}}"/>
+		{{/each}}
 	</div>
 </template>
-
-<template name="eventMessage">
-	{{#each messages}}
-		<div class="span3 well">
-			{{type}}
-		</div>
-	{{/each}}
-</template>	

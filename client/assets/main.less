@@ -1,0 +1,30 @@
+#slidepane {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #999;
+	display: none;
+	h1 {
+		position: absolute;
+		top: 45%;
+		width: 100%;
+		text-align: center;	
+		text-transform: uppercase;
+		font-weight: 900;
+		font-family: Impact;
+		opacity: .5;
+		color: #fff;
+		&:before{
+			content: '<';
+			position: relative;
+			left: -100px;
+		}
+		&:after {
+			content: '>';
+			position: relative;
+			left: 100px;
+		}
+	}
+}
